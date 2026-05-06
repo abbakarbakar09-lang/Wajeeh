@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro Network Solutions</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    background: linear-gradient(135deg, #0a3d62, #1e3799);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+header h1 { margin: 0; font-size: 32px; }
+
+.btn {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 12px 25px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #f4f4f4;
+    margin: 10px;
+    padding: 20px;
+    width: 260px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+footer {
+    background: #0a3d62;
+    color: white;
+    padding: 15px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Pro Network Solutions</h1>
+    <p>WiFi, CCTV & LAN Experts</p>
+    <a class="btn" href="https://wa.me/923XXXXXXXXX" target="_blank">Chat on WhatsApp</a>
+</header>
+
+<section>
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="card">
+            <h3>WiFi Setup</h3>
+            <p>Fast and secure internet installation</p>
+        </div>
+        <div class="card">
+            <h3>CCTV Installation</h3>
+            <p>24/7 security camera systems</p>
+        </div>
+        <div class="card">
+            <h3>LAN Networking</h3>
+            <p>Office & home networking solutions</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Contact Us</h2>
+    <form onsubmit="sendMsg(); return false;">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <textarea id="msg" placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Pro Network Solutions</p>
+</footer>
+
+<script>
+function sendMsg(){
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let msg = document.getElementById("msg").value;
+
+    let url = "https://wa.me/923XXXXXXXXX?text="
+        + "Name: " + name + "%0A"
+        + "Phone: " + phone + "%0A"
+        + "Message: " + msg;
+
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
